@@ -1,4 +1,4 @@
-# TarefasKanban
+# Tarefas do dia com Kanban
 
 
 ![2](https://user-images.githubusercontent.com/66533472/140819734-91451cbd-1a07-4f75-bc2d-f21b486e631d.PNG)
