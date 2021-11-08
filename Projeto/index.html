@@ -1,0 +1,59 @@
+<!-- Document Type Declaration. Informar ao navegador o tipo de documento e garantir que esse documento seja manipulado da mesma maneira em diferentes navegadores -->
+<!DOCTYPE html>
+
+<html>
+  <!--Parte que não é exibida no navegador da Web quando a página é carregada-->
+  <head>
+    <!-- Título da página, ficará na aba -->
+    <title>Login - Tarefas</title>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    <!-- O arquivo importado é o arquivo responsável pelo estilo da sua página. -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JavaScript externo, em vez de escrever o mesmo script várias vezes. -->
+    <script src="scripts.js"></script>
+  </head>
+
+  <!--Representa o conteúdo de um documento HTML-->
+  <body id="back">
+    <!--A tag define uma divisão ou uma seção em um documento HTML.-->
+    <div id="login">
+      <!--Criando um formulário-->
+      <form class="box">
+        <div class="card-header">
+          <h3>Login</h3>
+        </div>
+
+        <div class="card-content">
+          <div class="card-content-area">
+            <!--Texto-->
+            <label for="usuario">Usuário</label>
+
+            <!--Campo de entrada onde o usuário pode inserir dados. Placeholder é o que vai aparecer antes de digitar e o autocomplete desligado é para o computdor não completa o resto-->
+            <input
+              type="text"
+              id="usuario"
+              placeholder="Seu usuário..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="card-content-area">
+            <label for="password">Senha</label>
+
+            <input
+              type="password"
+              id="senha"
+              autocomplete="off"
+              placeholder="Sua senha..."
+            />
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <!--Botão que chama a função login-->
+          <input type="submit" value="login" class="submit" onclick="Login()" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

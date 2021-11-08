@@ -1,0 +1,376 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+#back {
+  padding: 0;
+  margin: 0;
+  background-color: #067a7e;
+}
+header {
+  background: rgba(19, 19, 19, 0.3);
+  background-image: url(menu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 16px 2px 16px 16px;
+  font-weight: bold;
+}
+
+h2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline wavy #1c6769;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.card {
+  background-color: rgba(19, 19, 19, 0.3);
+  padding: 40px;
+  border-radius: 2px;
+  width: 280px;
+}
+
+.card-header {
+  padding-bottom: 50px;
+  opacity: 0.8;
+
+  color: #fff;
+}
+
+.card-header::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+  margin-top: -17px;
+  margin-left: -5px;
+}
+
+.card-content label {
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.card-content-area {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.card-content-area input {
+  margin-top: 10px;
+  padding: 0 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  outline: none;
+  color: #fff;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer .submit {
+  width: 100%;
+  height: 40px;
+  background-color: #a13854;
+  border: none;
+  color: #e1e1e1;
+  margin: 10px 0;
+  transition: 1s;
+}
+
+.card-footer a {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+  color: #fff;
+  text-decoration: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: #582130;
+}
+
+a:visited {
+  color: #cc5f00;
+}
+a:hover {
+  cursor: pointer;
+  background-color: #fdfdfd;
+}
+.navegar {
+  color: #cc5f00;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.titulo {
+  color: #6bced1;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+#datetoday {
+  color: #cc5f00;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+.mensagem {
+  text-align: center;
+  color: white;
+  text-decoration: underline wavy #1c6769;
+}
+
+.banner {
+  width: 50px;
+  height: 50px;
+}
+#imagem {
+  width: 50px;
+  height: 50px;
+  margin: -300px 0px 20px 10px;
+  animation-name: surgirlogo;
+  animation-duration: 2s;
+}
+
+@keyframes surgirlogo {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 50px;
+  }
+}
+
+/* span{
+      text-decoration: underline wavy red;
+    } */
+
+#tabelatarefas {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tabelatarefas td,
+tr,
+th {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  background: #067a7e;
+  border: 1px solid #050403;
+  animation-name: surgir;
+  animation-duration: 5s;
+}
+
+@keyframes surgir {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 10px;
+  }
+  from {
+    background-color: whitesmoke;
+  }
+  to {
+    background-color: #067a7e;
+  }
+}
+
+.listagem {
+  text-align: center;
+}
+
+ol {
+  display: inline-block;
+  text-align: center;
+}
+ul {
+  display: inline-block;
+  text-align: center;
+}
+
+#like {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#opções {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin: 10px 10px 20px 0px;
+}
+
+.perguntas {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.digite {
+  background-color: #b1eff1;
+}
+
+input[type="text"] {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+#footer {
+  color: white;
+  background: #033b3d;
+  padding: 0px 16px 20px 4px;
+  margin: 10px 10px -1000px 0px;
+}
+
+#contatos {
+  color: #0a3233;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 33%;
+  background: #067a7e;
+  width: 1350px;
+  height: 300px;
+  position: absolute;
+}
+
+#footer2 {
+  color: white;
+  background: #033b3d;
+  padding: 900px 100px -10px 4px;
+  margin: -100px 0px 0px 0px;
+  margin-top: 30%;
+  margin-bottom: -100%;
+}
+
+#footer3 {
+  color: white;
+  background: #033b3d;
+  padding: 800px 100px -100px 4px;
+  margin: -1000px 0px 0px 0px;
+  margin-top: 5%;
+  margin-bottom: -100%;
+}
+
+.Table {
+  width: 500px;
+  height: 400px;
+}
+
+.video {
+  width: 500px;
+  height: 400px;
+  margin: -50px 10px 20px 0px;
+}
+
+.sublinhado {
+  text-decoration: underline wavy #1c6769;
+}
+
+.boards {
+  display: flex;
+  margin-top: 32px;
+  padding: 0px 0px 20px 140px;
+}
+
+.board {
+  background: #04575a;
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 4px;
+
+  margin: 0 16px;
+}
+
+.board h3 {
+  padding: 16px;
+  margin: 0;
+  color: #84e9ec;
+}
+
+.dropzone {
+  padding: 16px;
+  min-width: 282px;
+  min-height: 200px;
+}
+
+.box {
+  background-color: #034244;
+  color: white;
+  padding: 16px;
+  box-shadow: 0 2px 5px -1px #ffc23e;
+  width: 300px;
+  height: 350px;
+  margin: 25px 0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card {
+  background-color: #034244;
+  color: white;
+  padding: 16px;
+  box-shadow: 0 2px 5px -1px #ffc23e;
+  width: 250px;
+  margin: 25px 0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.status {
+  width: 30px;
+  height: 8px;
+  background: gray;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.status.yellow {
+  background: yellow;
+}
+
+.status.green {
+  background: rgb(4, 231, 4);
+}
+
+.status.red {
+  background: red;
+}
+
+.highlight {
+  background-color: #29386175;
+}
+
+.card,
+.dropzone {
+  transition: 900ms;
+}
+
+.is-dragging {
+  cursor: move;
+  opacity: 0.3;
+}
+
+.over {
+  background-color: #fdb71f81;
+}

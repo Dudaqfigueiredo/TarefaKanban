@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Menu - Tarefas</title>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″> 
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+
+  <!--Chama função de data-->
+  <body onload="showDate();">
+    <header>
+      <!--Título da página-->
+      <h1 class="titulo">Lista de tarefas</h1>
+      <!--Data de hoje-->
+      <div id="datetoday"></div>
+
+      <!--Parágrafo-->
+      <p class="mensagem">
+        Qualquer dúvida sobre sua lista de hoje, entre em contato conosco.<br /><br />Tenha
+        um excelente dia!<br >
+      </p>
+
+      <!--A tag define um conjunto de links de navegação.-->
+      <nav class="navegar">
+         <!--A tag define um conjunto de links de navegação.-->
+        <a href="#">Página Inicial</a>
+        <a href="tarefas.html">Tarefas anteriores</a>
+        <a href="info.html">Tags e informações</a>
+        <a href="contatos.html">Contatos</a>
+      </nav>
+
+      
+      
+
+      </div>
+    </header>
+
+    <br />
+
+    <div >
+      <!--Stong é para ficar em negrito-->
+      <label class=sublinhado  ><strong>Deseja ouvir uma música enquanto trabalha?</strong></label></div>
+      <!--Audio.  O loop é para ternubar e começar de novo-->
+      <audio controls="controls" loop=-1>
+        <!--Qual audio e o tipo-->
+        <source src="midia\music.mp3" type="audio/mp3"/>
+      </audio>
+    </div>
+
+    
+
+    <br />
+    <!--Tabela. O cellpadding é o espaçamento célula da tabela entre o bordo do conteúdo da célula e o cellspacing é a distância entre as células da tabela -->
+    <table cellpadding="5px" cellspacing="7" id="tabelatarefas">
+      <tr>
+        <th>Tarefa</th>
+        <th>Como fazer?</th>
+        <th>Grau de dificuldade</th>
+      </tr>
+
+      <tr>
+        <td>Criar um arquivo HTML</td>
+        <td>Pelo <strong>VSCode</strong></td>
+        <td>1</td>
+      </tr>
+
+      <tr>
+        <td>Criar um título</td>
+        <td>Utilizando title</td>
+        <td>2</td>
+      </tr>
+
+      <tr>
+        <td>Criar uma lista</td>
+        <td>Utilizando a tag ul</td>
+        <td>2</td>
+      </tr>
+
+      <tr>
+        <td>Criar um formulário</td>
+        <td>Utilizando a tag form</td>
+        <td>5</td>
+      </tr>
+
+      <tr>
+        <td>Criar uma tabela</td>
+        <td>Utilizando a tag table</td>
+        <td>2</td>
+      </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <h2>Seu Kanban:</h2>
+        <div class="boards">
+          <!--Board para as tarefas que tem que fazer-->
+            <div class="board">
+                <h3>To do</h3>
+                <div class="dropzone" id="do">
+                    <div class="card" draggable="true">
+                        <div class="status yellow"></div>
+                        <!--Tarefa-->
+                        <div class="content">Criar um arquivo HTML</div>
+                    </div>
+                    <!--O draggable é para arrastar -->
+                    <div class="card" draggable="true">
+                      <div class="status yellow"></div>
+                      <!--Tarefa-->
+                      <div class="content">Criar um título</div>
+                  </div>
+                  <div class="card" draggable="true">
+                    <div class="status yellow"></div>
+                    <!--Tarefa-->
+                    <div class="content">Criar uma lista</div>
+                </div>
+                </div>
+            </div>
+            <!--Board para as tarefas que está em progresso-->
+            <div class="board">
+                <h3>In progress</h3>
+                <div class="dropzone" id="doing">
+                    <!--O draggable é para arrastar -->
+                    <div class="card" draggable="true">
+                        <div class="status green"></div>
+                        <!--Tarefa-->
+                        <div class="content">Criar um formulário</div>
+                    </div>
+                </div>
+            </div>
+            <!--Board para as tarefas que terminou de fazer-->
+            <div class="board">
+                <h3>Done</h3>
+                <div class="dropzone" id="done">
+                  <!--O draggable é para arrastar -->
+                    <div class="card" draggable="true">
+                        <div class="status red"></div>
+                        <!--Tarefa-->
+                        <div class="content">Criar uma tabela</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br>
+    <!--Começando um formulário-->
+    <form method="post" name="informações" onsubmit="onSubmit()" >
+      <div>
+        <!--Required é para ser obrigatório-->
+        <label class="digite">O que você achou da sua lista de tarefas de hoje?</label>
+        <select
+          id="like"
+          name="like"
+          onchange="choiceMade(this.value)"
+          required
+        >
+          <!--Opções que pode escolher-->
+          <option value="" selected>Selecione</option>
+          <option value="péssimo">Péssimo</option>
+          <option value="Ruim">Ruim</option>
+          <option value="Regular">Regular</option>
+          <option value="Bom">Bom</option>
+          <option value="Excelente">Excelente</option>
+        </select>
+      </div>
+
+      <div id="opções">
+        <label class="digite">Conseguiu realizar todas as tarefas?</label>
+        <!--Radio é opção para marcar-->
+        <input type="radio" name="realizou" required /> Sim
+        <input type="radio" name="realizou" required /> Não
+      </div>
+
+      <div class="perguntas">
+        <div>
+          <label class="digite">Qual foi sua maior dificuldade? </label>
+          <!--Placeholder é para o que vai aparecer escrito enquanto não digitam, o tipo é texto e o minlength é para a quantidade minima de letras-->
+          <input
+            type="text"
+            id="dificuldade"
+            name="dificuldade"
+            required
+            minlength="2"
+            placeholder="Formulário"
+          />
+        </div>
+
+        <div>
+          <label class="digite">O que você achou mais fácil?</label>
+          <!--O Maxlength é a quantidade máxima de letras-->
+          <input
+            type="text"
+            id="qualidade"
+            name="qualidade"
+            required
+            maxlength="10"
+            placeholder="Table"
+          />
+        </div>
+      </div>
+
+
+      <div>
+        <br>
+        <label class="digite">Deixe uma nota sobre sua lista de tarefas de hoje</label>
+        <!--O range vai aparecer uma opção de arrastar um botão-->
+        <input id="slider" type="range" min="0" max="10" onchange="slidecount()"/>
+        <!--A tag é usada para representar o resultado de um cálculo-->
+        <output id="slideout"></output>
+        <br><br><br><br>
+      </div>
+
+      <!-- Essa parte só funciona se configurar um servidor web gratuito e local e executar seu código ou usar o live server pois sem ser dessa maneira
+      dá erro pq não é permitido pelo Polciy de Mesma Origem (CORS). Existe uma maneira de mudar isso mas não é recomendada -->
+      <div id="tags"></div>
+      <label class="digite">Se esquecer alguma tag das suas tarefas de hoje, isso pode ajudar:</label>
+      <!--Botões para cada imagem-->
+      <button  ID="Title" onclick="FotoTag(this.id)">Title</button>
+      <button  ID="Lista" onclick="FotoTag(this.id)">Lista</button>
+      <button  ID="Table" onclick="FotoTag(this.id)">Table</button><br><br>
+      <span id="tags"></span>
+      
+      <!-- Botão para enviar-->
+      <button type="submit" class="enviar">Enviar</button> <br><br><br><br>
+
+      <div>
+        <!--Colocar um video, qual video e o tipo-->
+        <label class=sublinhado><strong>Se não estiver conseguindo focar no seu trabalho, já tentou o método pomodoro?</strong></label><br>
+        <video class="video" controls="controls">
+        <source src="midia\pomodoro.mp4" type="video/mp4"/>
+        </video>
+      </div>
+
+
+    <!--A tag define um rodapé para um documento ou seção.-->
+    <footer id="footer">
+      <br />
+      <br />
+      E-mail: dudaqfigueiredo@gmail.com
+      <br />
+      Telefone: +55 (21)99999-9999
+    </footer>
+  </body>
+</html>
